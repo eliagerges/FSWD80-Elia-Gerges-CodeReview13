@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+   <style>
+
+   </style>    
+<h2 class="page-header text-danger"> Latest Events </h2>
+  <table class="table table-striped">
+   <thead>
+
+   </thead>
+{% for events in events %}
+   <tbody>
+       <tr>
+           <td class="text-danger">{{events.name}}</td>
+           <td  style="background-color: lightgreen;">{{events.description}}</td>
+           <td><img src="{{events.image}}"></td>
+           <td><a href="/events/details/{{events.id}}" class="btn btn-success">View</a>
+                   
+           <a href="/events/edit/{{events.id}}" class="btn btn-warning">Edit</a>
+           <a href="/events/delete/{{events.id}}" class="btn btn-danger">Delete</a>        
+           </td>
+       </tr> 
+{% endfor %}
+   </tbody>
+   </table>
+{% endblock %}

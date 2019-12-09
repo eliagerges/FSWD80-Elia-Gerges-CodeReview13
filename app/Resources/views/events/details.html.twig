@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<style>
+
+</style>
+       <h2 class="page-header text-danger">{{events.name}}</h2>
+       <ul class="list-group">
+               <li class="list-group-item">Name: {{events.name}}</li>
+               <li class="list-group-item">Date: {{events.date|date('F j, Y, g:i a')}}</li>
+               <li class="list-group-item"><strong> <img src="{{events.image}}"> </strong> </li>
+               <li class="list-group-item">Capacity: {{events.capacity}}</li>
+               <li class="list-group-item">Email: {{events.email}}</li>
+               <li class="list-group-item">Phone Number: {{events.number}}</li>
+               <li class="list-group-item">Address: {{events.address}}</li>
+               <li class="list-group-item">URL:<a href="https://www.getyourguide.at/wiener-riesenrad-l20087/fahrt-mit-dem-wiener-riesenrad-t41837/?referrer_view_id=4181ace0f70d271b7d820fd5fe0f02cd&referrer_view_position=1">{{events.uRL}} </a> </li>
+               <li class="list-group-item">Type: {{events.type}}</li>
+       </ul>
+       <p>
+               {{events.description}}
+       </p>
+{% endblock %}

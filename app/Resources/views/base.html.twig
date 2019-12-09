@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <title>{% block title %}Welcome!{% endblock %}</title>
+   <!-- Bootstrap core CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+   {% block stylesheets %}{% endblock %}
+       <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+ </head>
+ <body>
+  <style>
+    img{
+      width: 150px;
+      height: 150px;
+    }
+        body {
+     background-color: #690F95 ;
+    }
+    #headimg{
+      width: 100%;
+      height: 500px;
+      margin-top: 0;
+    }
+    #navtop, #navbot{
+      margin-bottom: 0;
+    }
+  </style>
+   <nav id="navtop" class="navbar navbar-inverse mb-0">
+     <div class="container">
+       <div class="navbar-header">
+         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+           <span class="sr-only">Toggle navigation</span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+       </div>
+       <div id="navbar" class="collapse navbar-collapse">
+         <ul class="nav navbar-nav">
+           <li><a href="/">Home</a></li>
+           <li><a href="/events/create">Create Event</a></li>
+         </ul>
+       </div><!--/.nav-collapse -->
+     </div>
+   </nav>
+      <div class="mt-0">
+     <img id="headimg"src="https://i1.wp.com/euroviajar.com/wp-content/uploads/2019/10/Christmas-markets-in-Vienna-in-Austria-the-most-classic-Christmas-market-in-Europe.jpg?fit=2220%2C1399&ssl=1">
+   </div>
+   <div class="container">
+<div class="row">
+<div class="col-md-12">
+   {% block body %}{% endblock %}
+</div>
+</div>
+    
+   </div><!-- /.container -->
+   <nav id="navbot" class="navbar navbar-inverse sticky-bottom">
+     <div class="container">
+       <div class="navbar-header">
+
+
+       </div>
+       <div id="navbar" class="collapse navbar-collapse">
+         <ul class="nav navbar-nav">
+           <li><a href="/">Thank you for visiting</a></li>
+
+         </ul>
+       </div><!--/.nav-collapse -->
+     </div>
+
+   </nav>
+
+{% block javascripts %}{% endblock %}
+ </body>
+</html>
